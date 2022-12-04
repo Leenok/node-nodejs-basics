@@ -1,5 +1,9 @@
+
 const transform = async () => {
-    // Write your code here 
+    process.stdin.on('data', data => {
+        const stchunk = data.toString().split("").reverse().join("");
+        process.stdout.write(stchunk);
+    })
 };
 
 await transform();
